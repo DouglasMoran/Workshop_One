@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LibraryDetailActivity"
+    android:orientation="vertical"
+    android:id="@+id/contentCardsDetails"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="90dp"
+        >
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardViewDetails"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:cardBackgroundColor="#F7F2F2"
+            app:cardCornerRadius="20dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/linearIconDetails"
+                android:layout_width="130dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:id="@+id/iconDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp"
+                    android:src="@drawable/new_york_512" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="10dp"
+                >
+
+                <TextView
+                    android:id="@+id/countryDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="New York"
+                    android:padding="5dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="#5D0475"
+                    android:layout_marginLeft="10dp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="42dp"
+                android:layout_marginTop="20dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/titleDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Biblioteca Publica de New York"
+                    android:textColor="#5D0475"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="140dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="50dp"
+                >
+
+                <TextView
+                    android:id="@+id/descriptionMainDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="acá va la descripción"
+                    />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
