@@ -24,7 +24,7 @@ import douglasmoran.com.libraries.Models.Libraries;
 
 public class MainActivity extends AppCompatActivity {
 
-    private String jsonUrl = "https://raw.githubusercontent.com/DouglasMoran/DSM-Taller_1-/master/data.json";
+    private String jsonUrl = "https://raw.githubusercontent.com/DouglasMoran/Workshop_One/master/data_libraries.json";
     private ArrayList<Libraries> libraries = new ArrayList<>();
 
 
