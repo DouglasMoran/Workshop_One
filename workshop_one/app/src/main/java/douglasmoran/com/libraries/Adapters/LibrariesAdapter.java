@@ -42,21 +42,21 @@ public class LibrariesAdapter extends RecyclerView.Adapter<LibrariesAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
 
-        final  Libraries library = libraries.get(i);
+        final  Libraries libraries1 = libraries.get(i);
 
-        viewHolder.countryItem.setText(library.getCountry());
-        viewHolder.numberpicItem.setText(library.getNumberpic());
+        viewHolder.countryItem.setText(libraries1.getCountry());
+        viewHolder.numberpicItem.setText(libraries1.getNumberpic());
 
         Glide.with(context)
-                .load(library.getImgItem())
+                .load(libraries1.getImgItem())
                 .into(viewHolder.iconItem);
 
 
-        viewHolder.relativeLayoutItem.setOnClickListener(new View.OnClickListener() {
+        viewHolder.cardViewItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, LibraryDetailActivity.class);
-                intent.putExtra("detail", library);
+                intent.putExtra("detail", libraries1);
                 context.startActivity(intent);
             }
         });
@@ -70,7 +70,7 @@ public class LibrariesAdapter extends RecyclerView.Adapter<LibrariesAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        RelativeLayout relativeLayoutItem;
+        //RelativeLayout relativeLayoutItem;
         CardView cardViewItem;
         ImageView iconItem;
         TextView countryItem, numberpicItem;
@@ -80,7 +80,7 @@ public class LibrariesAdapter extends RecyclerView.Adapter<LibrariesAdapter.View
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            relativeLayoutItem = itemView.findViewById(R.id.relativeItems);
+            //relativeLayoutItem = itemView.findViewById(R.id.relativeItems);
             cardViewItem = itemView.findViewById(R.id.cardViewItems);
             iconItem = itemView.findViewById(R.id.iconItems);
             countryItem = itemView.findViewById(R.id.countryItems);

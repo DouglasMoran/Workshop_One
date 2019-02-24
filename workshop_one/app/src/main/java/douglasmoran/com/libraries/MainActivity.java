@@ -3,6 +3,7 @@ package douglasmoran.com.libraries;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
@@ -25,7 +26,7 @@ import douglasmoran.com.libraries.Models.Libraries;
 public class MainActivity extends AppCompatActivity {
 
     private String jsonUrl = "https://raw.githubusercontent.com/DouglasMoran/Workshop_One/master/data_libraries.json";
-    private ArrayList<Libraries> libraries = new ArrayList<>();
+    private ArrayList<Libraries> librariesArrayList = new ArrayList<>();
 
 
     @Override
@@ -65,12 +66,12 @@ public class MainActivity extends AppCompatActivity {
             JSONObject tmp = jsonArray.getJSONObject(i);
             Gson gson = new Gson();
             Libraries library = gson.fromJson(tmp.toString(),Libraries.class);
-            libraries.add(library);
+            librariesArrayList.add(library);
         }
 
         RecyclerView recyclerView = findViewById(R.id.recyclerViewItem);
-        recyclerView.setAdapter(new LibrariesAdapter(this,libraries));
-        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
+        recyclerView.setAdapter(new LibrariesAdapter(this, librariesArrayList));
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
     }
 }

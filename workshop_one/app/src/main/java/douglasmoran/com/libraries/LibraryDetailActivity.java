@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-
+import com.bumptech.glide.request.RequestOptions;
 import douglasmoran.com.libraries.Models.Libraries;
 
 
@@ -31,7 +31,7 @@ public class LibraryDetailActivity extends AppCompatActivity {
     private void getRss() {
 
         cardViewDetail = findViewById(R.id.cardViewDetails);
-         iconDetail = findViewById(R.id.iconDetails);
+        iconDetail = findViewById(R.id.iconDetails);
         countryDetail = findViewById(R.id.countryDetails);
         titleDetail = findViewById(R.id.titleDetails);
         descriptionDetail = findViewById(R.id.descriptionMainDetails);
@@ -48,6 +48,7 @@ public class LibraryDetailActivity extends AppCompatActivity {
 
 
         countryDetail.setText(getLibraries.getCountry());
+        countryDetail.setTextColor(this.getResources().getColor(R.color.colorPrimary));
         titleDetail.setText(getLibraries.getTitle());
         descriptionDetail.setText(getLibraries.getMainDescription());
 
