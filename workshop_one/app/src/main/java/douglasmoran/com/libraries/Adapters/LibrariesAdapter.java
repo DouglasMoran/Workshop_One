@@ -9,14 +9,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-import douglasmoran.com.libraries.LibraryDetailActivity;
+import douglasmoran.com.libraries.Main2Activity;
 import douglasmoran.com.libraries.Models.Libraries;
 import douglasmoran.com.libraries.R;
 
@@ -55,7 +54,7 @@ public class LibrariesAdapter extends RecyclerView.Adapter<LibrariesAdapter.View
         viewHolder.cardViewItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, LibraryDetailActivity.class);
+                Intent intent = new Intent(context, Main2Activity.class);
                 intent.putExtra("detail", libraries1);
                 context.startActivity(intent);
             }
@@ -76,7 +75,6 @@ public class LibrariesAdapter extends RecyclerView.Adapter<LibrariesAdapter.View
         TextView countryItem, numberpicItem;
 
 
-
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -85,6 +83,7 @@ public class LibrariesAdapter extends RecyclerView.Adapter<LibrariesAdapter.View
             iconItem = itemView.findViewById(R.id.iconItems);
             countryItem = itemView.findViewById(R.id.countryItems);
             numberpicItem = itemView.findViewById(R.id.numberpicItems);
+
 
         }
     }

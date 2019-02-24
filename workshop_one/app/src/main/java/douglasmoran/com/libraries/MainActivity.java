@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
         loadContent();
 
-
     }
 
     private void loadContent() {
