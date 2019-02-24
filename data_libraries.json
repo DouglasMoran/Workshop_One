@@ -1,9 +1,9 @@
 [
     {   
         "id": 1,
-        "imgItem": "https://image.flaticon.com/icons/svg/1489/1489735.svg",
-        "imgDetail": "https://image.flaticon.com/icons/svg/1489/1489735.svg",
-        "country": "Dublín - Irlanda",
+        "imgItem": "https://image.flaticon.com/icons/png/128/68/68118.png",
+        "imgDetail": "https://image.flaticon.com/icons/png/128/68/68118.png",
+        "country": "Dublín",
         "numberpic": "6 Photos",
         "title": "Trinity College",
         "mainDescription": "Esta es sin duda una de las bibliotecas más fotografiadas del mundo y lo es por su bella estructura de planta y"
@@ -11,9 +11,9 @@
     },
     {   
         "id": 2,
-        "imgItem": "https://image.flaticon.com/icons/svg/1046/1046157.svg",
-        "imgDetail": "https://image.flaticon.com/icons/svg/1046/1046157.svg",
-        "country": "Copenhague - Dinamarca",
+        "imgItem": "https://image.flaticon.com/icons/png/512/25/25902.png",
+        "imgDetail": "https://image.flaticon.com/icons/png/512/25/25902.png",
+        "country": "Copenhague",
         "numberpic": "6 Photos",
         "title": "El Diamante Negro",
         "mainDescription": "El Diamante Negro es un impresionante edificio perteneciente a la Universidad de Copenhague, cuyos servicios"
@@ -21,80 +21,80 @@
     },
     {   
         "id": 3,
-        "imgcard": "https://image.flaticon.com/icons/svg/1046/1046185.svg",
-        "imgDetail": "https://image.flaticon.com/icons/svg/1046/1046185.svg",
-        "country": "Estocolmo - Suecia",
+        "imgItem": "https://image.flaticon.com/icons/png/512/92/92138.png",
+        "imgDetail": "https://image.flaticon.com/icons/png/512/92/92138.png",
+        "country": "Estocolmo",
         "numberpic": "6 Photos",
-        "title": "Biblioteca Pública de Estocolmo",
+        "title": "Pública de Estocolmo",
         "mainDescription": "La Biblioteca Pública de Estocolmo es un edificio cilíndrico situado en Estocolmo, Suecia, diseñado por el"
     
     },
     {   
         "id": 4,
-        "imgcard": "https://image.flaticon.com/icons/svg/1410/1410715.svg",
-        "imgDetail": "https://image.flaticon.com/icons/svg/1410/1410715.svg",
-        "country": "Alejandría - Egipto",
+        "imgItem": "https://image.flaticon.com/icons/png/512/121/121296.png",
+        "imgDetail": "https://image.flaticon.com/icons/png/512/121/121296.png",
+        "country": "Alejandría",
         "numberpic": "6 Photos",
-        "title": "Nueva Biblioteca Alexandrina",
+        "title": "Nueva Alexandrina",
         "mainDescription": "La Biblioteca Alexandrina es una importante biblioteca y centro cultural situado en la ciudad egipcia de Alejandría,"
     
     },
     {   
         "id": 5,
-        "imgcard": "https://image.flaticon.com/icons/svg/1046/1046158.svg",
-        "imgDetail": "https://image.flaticon.com/icons/svg/1046/1046158.svg",
-        "country": "New York - Estados Unidos",
+        "imgItem": "https://douglasflores9817.000webhostapp.com/img/new_york_256.png",
+        "imgDetail": "https://douglasflores9817.000webhostapp.com/img/new_york_256.png",
+        "country": "New York",
         "numberpic": "6 Photos",
-        "title": "Biblioteca pública de Nueva York",
+        "title": "Pública de Nueva York",
         "mainDescription": "La Biblioteca Pública de Nueva York es una de las bibliotecas más importantes del mundo y con más contenido de"
     },
     {   
         "id": 6,
-        "imgcard": "https://image.flaticon.com/icons/svg/226/226797.svg",
-        "imgDetail": "https://image.flaticon.com/icons/svg/226/226797.svg",
-        "country": "Berlín - Alemania",
+        "imgItem": "https://image.flaticon.com/icons/png/512/66/66354.png",
+        "imgDetail": "https://image.flaticon.com/icons/png/512/66/66354.png",
+        "country": "Berlín",
         "numberpic": "6 Photos",
-        "title": "Biblioteca de la Universidad Humboldt",
+        "title": "Universidad Humboldt",
         "mainDescription": "La Universidad de Humboldt de Berlín (en alemán, Humboldt-Universität zu Berlin) es la más antigua de esta ciudad"
     
     },
     {   
         "id": 7,
-        "imgcard": "https://image.flaticon.com/icons/svg/192/192850.svg",
-        "imgDetail": "https://image.flaticon.com/icons/svg/192/192850.svg",
-        "country": "Ciudad del Vaticano - Italia",
+        "imgItem": "https://image.flaticon.com/icons/png/512/68/68350.png",
+        "imgDetail": "https://image.flaticon.com/icons/png/512/68/68350.png",
+        "country": "Vaticano",
         "numberpic": "6 Photos",
-        "title": "Biblioteca Apostólica Vaticana",
+        "title": "Apostólica Vaticana",
         "mainDescription": "La Biblioteca Apostólica Vaticana es la biblioteca de la Santa Sede, ubicada en Ciudad del Vaticano."
     
     },
     {   
         "id": 8,
-        "imgcard": "https://image.flaticon.com/icons/svg/353/353412.svg",
-        "imgDetail": "https://image.flaticon.com/icons/svg/353/353412.svg",
-        "country": "Trømso - Noruega",
+        "imgItem": "https://image.flaticon.com/icons/png/512/92/92145.png",
+        "imgDetail": "https://image.flaticon.com/icons/png/512/92/92145.png",
+        "country": "Trømso",
         "numberpic": "6 Photos",
-        "title": "Biblioteca Pública de Trømso",
+        "title": "Pública de Trømso",
         "mainDescription": "Es singular por varias razones, aunque quizás la que más llame la atención es que se trata de la biblioteca situada"
     
     },
     {   
         "id": 9,
-        "imgcard": "https://image.flaticon.com/icons/svg/1397/1397422.svg",
-        "imgDetail": "https://image.flaticon.com/icons/svg/1397/1397422.svg",
-        "country": "Lima - Perú",
+        "imgItem": "https://image.flaticon.com/icons/png/512/17/17909.png",
+        "imgDetail": "https://image.flaticon.com/icons/png/512/17/17909.png",
+        "country": "Lima",
         "numberpic": "6 Photos",
-        "title": "Biblioteca de la Basílica de San Francisco",
+        "title": "Basílica de San Francisco",
         "mainDescription": "Un amante de la historia de la iglesia se siente automáticamente transportado hasta el siglo XIV"
     
     },
     {   
         "id": 10,
-        "imgcard": "https://image.flaticon.com/icons/svg/1009/1009045.svg",
-        "imgDetail": "https://image.flaticon.com/icons/svg/1009/1009045.svg",
-        "country": "Praga - República Checa",
+        "imgItem": "https://image.flaticon.com/icons/png/512/92/92148.png",
+        "imgDetail": "https://image.flaticon.com/icons/png/512/92/92148.png",
+        "country": "Praga",
         "numberpic": "6 Photos",
-        "title": "Biblioteca Nacional de Praga",
+        "title": "Nacional de Praga",
         "mainDescription": "El Clementinum de Praga (o Klementinum en checo) es una de las visitas imprescindibles en  la ciudad."
     }
     
