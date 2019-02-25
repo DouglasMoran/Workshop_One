@@ -1,12 +1,38 @@
 package douglasmoran.com.libraries;
 
+
 import android.content.Context;
+
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+
+import com.android.volley.toolbox.Volley;
+
+import com.google.gson.Gson;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
+
+import douglasmoran.com.libraries.Models.Photos;
 
 
 /**
@@ -17,7 +43,7 @@ import android.view.ViewGroup;
  * Use the {@link PhotosFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PhotosFragment extends Fragment {
+public class PhotosFragment extends Fragment{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -28,6 +54,19 @@ public class PhotosFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    ArrayList<Photos> photosArrayListBiblioteca;
+    RecyclerView recyclerViewPhotos;
+
+    RequestQueue request;
+
+
+
+
+
+
+
+
 
     public PhotosFragment() {
         // Required empty public constructor
@@ -58,14 +97,73 @@ public class PhotosFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        loadPhotos();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_photos, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_photos, container, false);
+
+        photosArrayListBiblioteca = new ArrayList<>();
+
+        recyclerViewPhotos = view.findViewById(R.id.recyclerFragmentPhotos);
+
+        recyclerViewPhotos.setLayoutManager(new LinearLayoutManager(this.getContext()));
+
+        recyclerViewPhotos.setHasFixedSize(true);
+
+        request = Volley.newRequestQueue(getContext());
+
+        loadPhotos();
+
+        return view;
     }
+
+    private void loadPhotos() {
+            RequestQueue resRequestQueue = Volley.newRequestQueue(getContext());
+        String jsonUrl = "https://raw.githubusercontent.com/DouglasMoran/Workshop_One/master/data_libraries.json";
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(jsonUrl, new Response.Listener<JSONArray>() {
+                @Override
+                public void onResponse(JSONArray response) {
+                    try {
+                        parseContent(response);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(getContext(), "ERROR al obtener los recursos de la red",Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            resRequestQueue.add(jsonArrayRequest);
+    }
+
+    private void parseContent(JSONArray jsonArray) throws JSONException {
+
+        for (int i = 0; i < jsonArray.length(); i++){
+            JSONObject tmp = jsonArray.getJSONObject(i);
+            Gson gson = new Gson();
+            Photos photo = gson.fromJson(tmp.toString(),Photos.class);
+            photosArrayListBiblioteca.add(photo);
+        }
+
+
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
+
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -85,11 +183,7 @@ public class PhotosFragment extends Fragment {
         }
     }
 
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mListener = null;
-    }
+
 
     /**
      * This interface must be implemented by activities that contain this
