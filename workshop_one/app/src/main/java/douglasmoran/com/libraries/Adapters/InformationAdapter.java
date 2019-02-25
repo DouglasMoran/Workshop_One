@@ -75,4 +75,10 @@ public class InformationAdapter extends RecyclerView.Adapter<InformationAdapter.
 
         }
     }
+
+    public void addData(ArrayList<Information> information) {
+        informationArrayList.addAll(information);
+        notifyDataSetChanged();
+    }
+
 }

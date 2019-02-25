@@ -4,14 +4,28 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
+import douglasmoran.com.libraries.Adapters.InformationAdapter;
 import douglasmoran.com.libraries.Adapters.LibrariesAdapter;
+import douglasmoran.com.libraries.Models.Information;
 import douglasmoran.com.libraries.Models.Libraries;
 import douglasmoran.com.libraries.R;
 
@@ -36,11 +50,10 @@ public class InformationFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    private String jsonUrl = "https://raw.githubusercontent.com/DouglasMoran/Workshop_One/master/data_libraries.json";
-    ArrayList<Libraries> librariesArrayList = new ArrayList<>();
-
+    private String jsonUrl = "https://raw.githubusercontent.com/DouglasMoran/Workshop_One/master/data_information.json";
+    ArrayList<Information> informationArrayList = new ArrayList<>();
     RecyclerView recyclerViewInformation;
-    LibrariesAdapter librariesAdapter;
+    InformationAdapter informationAdapter;
 
     public InformationFragment() {
         // Required empty public constructor
@@ -77,7 +90,64 @@ public class InformationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_information, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_information, container, false);
+
+        informationArrayList = new ArrayList<>();
+
+        recyclerViewInformation = view.findViewById(R.id.recyclerFragmentPhotos);
+
+        recyclerViewInformation.setHasFixedSize(true);
+
+        recyclerViewInformation.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        informationArrayList = new ArrayList<Information>();
+
+        loadFragmentInformation();
+
+        informationAdapter = new InformationAdapter(getActivity(),informationArrayList);
+        recyclerViewInformation.setAdapter(informationAdapter);
+        informationAdapter.notifyDataSetChanged();
+
+        return view;
+
+    }
+
+    private void loadFragmentInformation() {
+
+        RequestQueue resRequestQueue = Volley.newRequestQueue(getContext());
+        JsonArrayRequest aarRequest = new JsonArrayRequest(jsonUrl, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray jsonArray) {
+                if (jsonArray.length()>0){
+                    for (int i = 0; i < jsonArray.length(); i++){
+                        JSONObject tmp = null;
+                        try {
+                            tmp = jsonArray.getJSONObject(i);
+                            informationAdapter.notifyDataSetChanged();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        Gson gson = new Gson();
+                        Information info = gson.fromJson(tmp.toString(),Information.class);
+                        informationArrayList.add(info);
+                    }
+
+                    informationAdapter.addData(informationArrayList);
+                }
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                    }
+                }){
+
+        };
+        Volley.newRequestQueue(getActivity()).add(aarRequest);
+
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
