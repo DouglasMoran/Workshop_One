@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#F3CA1A1A"
+    app:cardCornerRadius="5dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="7dp"
+    android:layout_marginBottom="7dp"
+    >
+
+    <TextView
+        android:id="@+id/txtHistoryInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HISTORY"
+        android:textSize="24dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="15dp"
+        >
+
+        <TextView
+            android:id="@+id/historyDescriptionInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:text="Acá texto de historia"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Construction: "
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/constructionInfo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Set Construction"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginRight="10dp"
+        android:textSize="15dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jewel: "
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/jewelInfo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Set Jewel"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginRight="10dp"
+        android:textSize="15dp"
+        android:layout_marginBottom="20dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Curiosity: "
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/curiosityInfo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Set curiosity"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginRight="10dp"
+        android:textSize="15dp"
+        android:layout_marginBottom="20dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desing By: "
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/desingInfo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Set desing"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginRight="10dp"
+        android:textSize="15dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address: "
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/addressInfo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="Set address"
+        android:textSize="15dp" />
+
+</android.support.v7.widget.CardView>

@@ -12,6 +12,13 @@ public class Libraries implements Parcelable {
     private String numberpic;
     private String title;
     private String mainDescription;
+    //DATA JSON ADD FOR ITEM INFORMATION
+    private String history;
+    private String construction;
+    private String jewel;
+    private String curiosity;
+    private String desing;
+    private String address;
 
 
     protected Libraries(Parcel in){
@@ -23,6 +30,14 @@ public class Libraries implements Parcelable {
         numberpic = in.readString();
         title = in.readString();
         mainDescription = in.readString();
+
+        history = in.readString();
+        construction = in.readString();
+        jewel = in.readString();
+        curiosity = in.readString();
+        desing = in.readString();
+        address = in.readString();
+
     }
 
 
@@ -100,6 +115,57 @@ public class Libraries implements Parcelable {
         this.mainDescription = mainDescription;
     }
 
+    //get and set for item info
+
+
+    public String getHistory() {
+        return history;
+    }
+
+    public void setHistory(String history) {
+        this.history = history;
+    }
+
+    public String getConstruction() {
+        return construction;
+    }
+
+    public void setConstruction(String construction) {
+        this.construction = construction;
+    }
+
+    public String getJewel() {
+        return jewel;
+    }
+
+    public void setJewel(String jewel) {
+        this.jewel = jewel;
+    }
+
+    public String getCuriosity() {
+        return curiosity;
+    }
+
+    public void setCuriosity(String curiosity) {
+        this.curiosity = curiosity;
+    }
+
+    public String getDesing() {
+        return desing;
+    }
+
+    public void setDesing(String desing) {
+        this.desing = desing;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     @Override
     public void writeToParcel(Parcel desc, int flags) {
 
@@ -110,6 +176,14 @@ public class Libraries implements Parcelable {
         desc.writeString(numberpic);
         desc.writeString(title);
         desc.writeString(mainDescription);
+
+
+        desc.writeString(history);
+        desc.writeString(construction);
+        desc.writeString(jewel);
+        desc.writeString(curiosity);
+        desc.writeString(desing);
+        desc.writeString(address);
 
     }
 

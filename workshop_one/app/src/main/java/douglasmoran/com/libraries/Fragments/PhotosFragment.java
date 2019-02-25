@@ -1,4 +1,4 @@
-package douglasmoran.com.libraries;
+package douglasmoran.com.libraries.Fragments;
 
 
 import android.content.Context;
@@ -6,6 +6,7 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -32,7 +33,10 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 
+import douglasmoran.com.libraries.Adapters.PhotosAdapter;
+import douglasmoran.com.libraries.Models.Libraries;
 import douglasmoran.com.libraries.Models.Photos;
+import douglasmoran.com.libraries.R;
 
 
 /**
@@ -55,17 +59,13 @@ public class PhotosFragment extends Fragment{
 
     private OnFragmentInteractionListener mListener;
 
+
+    private String jsonUrl = "https://raw.githubusercontent.com/DouglasMoran/Workshop_One/master/photos.json";
     ArrayList<Photos> photosArrayListBiblioteca;
     RecyclerView recyclerViewPhotos;
+    PhotosAdapter photosAdapter;
 
-    RequestQueue request;
-
-
-
-
-
-
-
+    //RequestQueue request;
 
 
     public PhotosFragment() {
@@ -111,49 +111,54 @@ public class PhotosFragment extends Fragment{
 
         recyclerViewPhotos = view.findViewById(R.id.recyclerFragmentPhotos);
 
-        recyclerViewPhotos.setLayoutManager(new LinearLayoutManager(this.getContext()));
-
         recyclerViewPhotos.setHasFixedSize(true);
 
-        request = Volley.newRequestQueue(getContext());
+        recyclerViewPhotos.setLayoutManager(new GridLayoutManager(getContext(),2));
+
+        photosArrayListBiblioteca = new ArrayList<Photos>();
+        //request = Volley.newRequestQueue(getContext());
 
         loadPhotos();
+
+        photosAdapter = new PhotosAdapter(getActivity(),photosArrayListBiblioteca);
+        recyclerViewPhotos.setAdapter(photosAdapter);
+        photosAdapter.notifyDataSetChanged();
 
         return view;
     }
 
     private void loadPhotos() {
-            RequestQueue resRequestQueue = Volley.newRequestQueue(getContext());
-        String jsonUrl = "https://raw.githubusercontent.com/DouglasMoran/Workshop_One/master/data_libraries.json";
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(jsonUrl, new Response.Listener<JSONArray>() {
-                @Override
-                public void onResponse(JSONArray response) {
-                    try {
-                        parseContent(response);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
+        RequestQueue resRequestQueue = Volley.newRequestQueue(getContext());
+        JsonArrayRequest aarRequest = new JsonArrayRequest(jsonUrl, new Response.Listener<JSONArray>() {
+                    @Override
+                    public void onResponse(JSONArray jsonArray) {
+                        if (jsonArray.length()>0){
+                            for (int i = 0; i < jsonArray.length(); i++){
+                                JSONObject tmp = null;
+                                try {
+                                    tmp = jsonArray.getJSONObject(i);
+                                    photosAdapter.notifyDataSetChanged();
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                                Gson gson = new Gson();
+                                Photos pic = gson.fromJson(tmp.toString(),Photos.class);
+                                photosArrayListBiblioteca.add(pic);
+                            }
+
+                            photosAdapter.addData(photosArrayListBiblioteca);
+                        }
                     }
-                }
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(getContext(), "ERROR al obtener los recursos de la red",Toast.LENGTH_SHORT).show();
-                }
-            });
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
 
-            resRequestQueue.add(jsonArrayRequest);
-    }
+                    }
+                }){
 
-    private void parseContent(JSONArray jsonArray) throws JSONException {
-
-        for (int i = 0; i < jsonArray.length(); i++){
-            JSONObject tmp = jsonArray.getJSONObject(i);
-            Gson gson = new Gson();
-            Photos photo = gson.fromJson(tmp.toString(),Photos.class);
-            photosArrayListBiblioteca.add(photo);
-        }
-
-
+        };
+        Volley.newRequestQueue(getActivity()).add(aarRequest);
     }
 
     @Override
@@ -161,8 +166,6 @@ public class PhotosFragment extends Fragment{
         super.onDetach();
         mListener = null;
     }
-
-
 
 
     // TODO: Rename method, update argument and hook method into UI event

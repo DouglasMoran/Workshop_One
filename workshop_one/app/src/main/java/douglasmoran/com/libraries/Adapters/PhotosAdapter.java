@@ -22,6 +22,8 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
     Context context;
     ArrayList<Photos> photosArrayList;
 
+
+
     public PhotosAdapter(Context context, ArrayList<Photos> photosArrayList) {
         this.context = context;
         this.photosArrayList = photosArrayList;
@@ -38,18 +40,19 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull PhotosAdapter.ViewHolder viewHolder, int i) {
 
-
         final Photos photo = photosArrayList.get(i);
 
         Glide.with(context)
                 .load(photo.getImg1())
                 .into(viewHolder.postal);
 
+
+
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return photosArrayList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -67,5 +70,10 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
 
 
         }
+    }
+
+    public void addData(ArrayList<Photos> phots) {
+        photosArrayList.addAll(phots);
+        notifyDataSetChanged();
     }
 }

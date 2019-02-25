@@ -13,6 +13,9 @@ public class Photos implements Parcelable {
     private String img5;
     private String img6;
 
+    public Photos() {
+    }
+
     protected Photos(Parcel in) {
         id = in.readInt();
         img1 = in.readString();

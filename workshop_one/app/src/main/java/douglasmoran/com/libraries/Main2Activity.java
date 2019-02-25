@@ -3,11 +3,8 @@ package douglasmoran.com.libraries;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.Toolbar;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -25,6 +22,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
+import douglasmoran.com.libraries.Fragments.InformationFragment;
+import douglasmoran.com.libraries.Fragments.MapFragment;
+import douglasmoran.com.libraries.Fragments.PhotosFragment;
 import douglasmoran.com.libraries.Models.Libraries;
 
 public class Main2Activity extends AppCompatActivity implements InformationFragment.OnFragmentInteractionListener, PhotosFragment.OnFragmentInteractionListener, MapFragment.OnFragmentInteractionListener{
