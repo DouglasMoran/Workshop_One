@@ -2,6 +2,7 @@
     {   
         "id": 1,
         "time": "https://image.flaticon.com/icons/png/512/56/56141.png",
+        "txttime": "40°F",
         "imgItem": "https://douglasflores9817.000webhostapp.com/img/dublin_256.png",
         "imgDetail": "https://douglasflores9817.000webhostapp.com/img/dublin_256.png",
         "country": "Dublín",
@@ -12,6 +13,7 @@
     },
     {   
         "id": 2,
+        "txttime": "50°F",
         "time": "https://image.flaticon.com/icons/png/512/56/56141.png",
         "imgItem": "https://douglasflores9817.000webhostapp.com/img/denmark_256.png",
         "imgDetail": "https://douglasflores9817.000webhostapp.com/img/denmark_256.png",
@@ -23,6 +25,7 @@
     },
     {   
         "id": 3,
+        "txttime": "70°F",
         "time": "https://image.flaticon.com/icons/png/512/56/56141.png",
         "imgItem": "https://douglasflores9817.000webhostapp.com/img/stockholm_256.png",
         "imgDetail": "https://douglasflores9817.000webhostapp.com/img/stockholm_256.png",
@@ -34,6 +37,7 @@
     },
     {   
         "id": 4,
+        "txttime": "80°F",
         "time": "https://image.flaticon.com/icons/png/512/56/56141.png",
         "imgItem": "https://douglasflores9817.000webhostapp.com/img/alexandria_256.png",
         "imgDetail": "https://douglasflores9817.000webhostapp.com/img/alexandria_256.png",
@@ -45,6 +49,7 @@
     },
     {   
         "id": 5,
+        "txttime": "40°F",
         "time": "https://image.flaticon.com/icons/png/512/56/56141.png",
         "imgItem": "https://douglasflores9817.000webhostapp.com/img/new_york_256.png",
         "imgDetail": "https://douglasflores9817.000webhostapp.com/img/new_york_256.png",
@@ -55,6 +60,8 @@
     },
     {   
         "id": 6,
+        "txttime": "60°F",
+        "time": "https://image.flaticon.com/icons/png/512/56/56141.png",
         "imgItem": "https://douglasflores9817.000webhostapp.com/img/berlin_256.png",
         "imgDetail": "https://douglasflores9817.000webhostapp.com/img/berlin_256.png",
         "country": "Berlín",
@@ -65,6 +72,8 @@
     },
     {   
         "id": 7,
+        "txttime": "30°F",
+        "time": "https://image.flaticon.com/icons/png/512/56/56141.png",
         "imgItem": "https://douglasflores9817.000webhostapp.com/img/vatican_256.png",
         "imgDetail": "https://douglasflores9817.000webhostapp.com/img/vatican_256.png",
         "country": "Vaticano",
@@ -75,6 +84,8 @@
     },
     {   
         "id": 8,
+        "time": "https://image.flaticon.com/icons/png/512/56/56141.png",
+        "txttime": "20°F",
         "imgItem": "https://douglasflores9817.000webhostapp.com/img/norway_256.png",
         "imgDetail": "https://douglasflores9817.000webhostapp.com/img/norway_256.png",
         "country": "Trømso",
@@ -85,6 +96,8 @@
     },
     {   
         "id": 9,
+        "txttime": "90°F",
+        "time": "https://image.flaticon.com/icons/png/512/56/56141.png",
         "imgItem": "https://douglasflores9817.000webhostapp.com/img/peru_256.png",
         "imgDetail": "https://douglasflores9817.000webhostapp.com/img/peru_256.png",
         "country": "Lima",
@@ -95,6 +108,8 @@
     },
     {   
         "id": 10,
+        "txttime": "50°F",
+        "time": "https://image.flaticon.com/icons/png/512/56/56141.png",
         "imgItem": "https://douglasflores9817.000webhostapp.com/img/prague_256.png",
         "imgDetail": "https://douglasflores9817.000webhostapp.com/img/prague_256.png",
         "country": "Praga",
