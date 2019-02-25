@@ -9,6 +9,7 @@
     android:layout_marginRight="10dp"
     android:layout_marginTop="7dp"
     android:layout_marginBottom="7dp"
+    android:id="@+id/cardViewInfo"
     >
 
     <TextView
@@ -81,13 +82,12 @@
         android:id="@+id/jewelInfo"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Set Jewel"
-        android:layout_marginTop="300dp"
         android:layout_marginLeft="105dp"
+        android:layout_marginTop="300dp"
         android:layout_marginRight="10dp"
-        android:textSize="15dp"
         android:layout_marginBottom="20dp"
-        />
+        android:text="Set Jewel"
+        android:textSize="15dp" />
 
 
     <TextView
