@@ -8,7 +8,7 @@
     app:cardCornerRadius="10dp"
     android:layout_marginTop="15dp"
     android:layout_marginLeft="20dp"
-    android:id="@+id/cardPostales"
+    android:id="@+id/cardViewRecyclerPostales"
     >
 
     <LinearLayout
