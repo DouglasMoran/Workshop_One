@@ -83,8 +83,6 @@ public class LibrariesAdapter extends RecyclerView.Adapter<LibrariesAdapter.View
             iconItem = itemView.findViewById(R.id.iconItems);
             countryItem = itemView.findViewById(R.id.countryItems);
             numberpicItem = itemView.findViewById(R.id.numberpicItems);
-
-
         }
     }
 }

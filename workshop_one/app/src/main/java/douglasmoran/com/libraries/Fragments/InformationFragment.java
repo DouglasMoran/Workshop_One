@@ -51,7 +51,7 @@ public class InformationFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     private String jsonUrl = "https://raw.githubusercontent.com/DouglasMoran/Workshop_One/master/data_information.json";
-    ArrayList<Information> informationArrayList = new ArrayList<>();
+    ArrayList<Information> informationArrayList;
     RecyclerView recyclerViewInformation;
     InformationAdapter informationAdapter;
 
@@ -84,6 +84,7 @@ public class InformationFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        loadFragmentInformation();
     }
 
     @Override
@@ -95,13 +96,13 @@ public class InformationFragment extends Fragment {
 
         informationArrayList = new ArrayList<>();
 
-        recyclerViewInformation = view.findViewById(R.id.recyclerFragmentPhotos);
+        recyclerViewInformation = view.findViewById(R.id.recyclerFragmentInformation);
 
         recyclerViewInformation.setHasFixedSize(true);
 
         recyclerViewInformation.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        informationArrayList = new ArrayList<Information>();
+        informationArrayList = new ArrayList<>();
 
         loadFragmentInformation();
 

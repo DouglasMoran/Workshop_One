@@ -13,6 +13,9 @@ public class Libraries implements Parcelable {
     private String title;
     private String mainDescription;
 
+    private String time;
+    private String txttime;
+
 
     protected Libraries(Parcel in){
 
@@ -23,6 +26,9 @@ public class Libraries implements Parcelable {
         numberpic = in.readString();
         title = in.readString();
         mainDescription = in.readString();
+
+        time = in.readString();
+        txttime = in.readString();
 
     }
 
@@ -97,8 +103,24 @@ public class Libraries implements Parcelable {
         return mainDescription;
     }
 
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
     public void setMainDescription(String mainDescription) {
         this.mainDescription = mainDescription;
+    }
+
+    public String getTxttime() {
+        return txttime;
+    }
+
+    public void setTxttime(String txttime) {
+        this.txttime = txttime;
     }
 
     @Override
@@ -111,6 +133,9 @@ public class Libraries implements Parcelable {
         desc.writeString(numberpic);
         desc.writeString(title);
         desc.writeString(mainDescription);
+
+        desc.writeString(time);
+        desc.writeString(txttime);
 
     }
 

@@ -30,8 +30,8 @@ import douglasmoran.com.libraries.Models.Libraries;
 public class Main2Activity extends AppCompatActivity implements InformationFragment.OnFragmentInteractionListener, PhotosFragment.OnFragmentInteractionListener, MapFragment.OnFragmentInteractionListener{
 
     CardView cardViewDetail;
-    TextView countryDetail, titleDetail, descriptionDetail;
-    ImageView iconDetail;
+    TextView countryDetail, titleDetail, descriptionDetail, txtsTimes;
+    ImageView iconDetail, times;
 
     //ImageView swipetabs;
 
@@ -82,7 +82,8 @@ public class Main2Activity extends AppCompatActivity implements InformationFragm
         countryDetail = findViewById(R.id.countryDetails);
         titleDetail = findViewById(R.id.titleDetails);
         descriptionDetail = findViewById(R.id.descriptionMainDetails);
-        //swipetabs = findViewById(R.id.swipe);
+        times = findViewById(R.id.timeCards);
+        txtsTimes = findViewById(R.id.textoTime);
 
     }
 
@@ -94,11 +95,16 @@ public class Main2Activity extends AppCompatActivity implements InformationFragm
                 .load(getLibraries.getImgDetail())
                 .into(iconDetail);
 
+        Glide.with(this)
+                .load(getLibraries.getTime())
+                .into(times);
+
 
         countryDetail.setText(getLibraries.getCountry());
         countryDetail.setTextColor(this.getResources().getColor(R.color.colorPrimary));
         titleDetail.setText(getLibraries.getTitle());
         descriptionDetail.setText(getLibraries.getMainDescription());
+        txtsTimes.setText(getLibraries.getTxttime());
 
     }
 

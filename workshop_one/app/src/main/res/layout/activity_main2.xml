@@ -63,19 +63,40 @@
     <android.support.v7.widget.CardView
         android:id="@+id/cardViewDetails"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="160dp"
         app:cardBackgroundColor="#F7F2F2"
         app:cardCornerRadius="7dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         >
 
+        <ImageView
+            android:id="@+id/timeCards"
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:src="@drawable/times"
+            android:layout_gravity="right"
+            android:layout_marginTop="130dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:id="@+id/textoTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="70° F"
+            android:layout_gravity="right"
+            android:layout_marginTop="130dp"
+            android:layout_marginRight="40dp"
+            android:textSize="12dp"
+            />
+
         <LinearLayout
             android:id="@+id/linearIconDetails"
             android:layout_width="110dp"
             android:layout_height="150dp"
             android:orientation="vertical"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="35dp"
             >
 
             <ImageView
@@ -91,7 +112,7 @@
         <LinearLayout
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="95dp"
             android:orientation="vertical"
             android:layout_gravity="left"
             >
@@ -103,7 +124,6 @@
                 android:text="New York"
                 android:gravity="center_horizontal"
                 android:textColor="#5D0475"
-                android:layout_marginLeft="10dp"
 
                 />
 
@@ -133,7 +153,7 @@
         <LinearLayout
             android:layout_width="170dp"
             android:layout_height="120dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="45dp"
             android:orientation="vertical"
             android:layout_marginLeft="110dp"
             >
@@ -149,18 +169,16 @@
 
     </android.support.v7.widget.CardView>
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="7dp"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:layout_marginTop="10dp">
+
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            >
 
             <android.support.design.widget.TabItem
                 android:id="@+id/tabItem"
@@ -181,7 +199,6 @@
                 android:text="@string/tab_text_3" />
 
         </android.support.design.widget.TabLayout>
-    </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/container"
