@@ -57,6 +57,8 @@ public class PhotosFragment extends Fragment{
     private String mParam1;
     private String mParam2;
 
+    public int elTutoId = 0;
+
     private OnFragmentInteractionListener mListener;
 
 
@@ -66,6 +68,7 @@ public class PhotosFragment extends Fragment{
     PhotosAdapter photosAdapter;
 
     //RequestQueue request;
+
 
 
     public PhotosFragment() {
@@ -132,6 +135,8 @@ public class PhotosFragment extends Fragment{
         JsonArrayRequest aarRequest = new JsonArrayRequest(jsonUrl, new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray jsonArray) {
+                        //Limpiar la lista
+                        photosArrayListBiblioteca.clear();
                         if (jsonArray.length()>0){
                             for (int i = 0; i < jsonArray.length(); i++){
                                 JSONObject tmp = null;
@@ -143,7 +148,9 @@ public class PhotosFragment extends Fragment{
                                 }
                                 Gson gson = new Gson();
                                 Photos pic = gson.fromJson(tmp.toString(),Photos.class);
-                                photosArrayListBiblioteca.add(pic);
+                                if(pic.getId()==elTutoId)
+                                    photosArrayListBiblioteca.add(pic);
+
                             }
 
                             photosAdapter.addData(photosArrayListBiblioteca);

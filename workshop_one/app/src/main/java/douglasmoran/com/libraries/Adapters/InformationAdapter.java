@@ -77,7 +77,8 @@ public class InformationAdapter extends RecyclerView.Adapter<InformationAdapter.
     }
 
     public void addData(ArrayList<Information> information) {
-        informationArrayList.addAll(information);
+        //Evitar duplicados
+        informationArrayList = (information);
         notifyDataSetChanged();
     }
 

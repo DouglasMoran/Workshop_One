@@ -33,6 +33,7 @@ public class Main2Activity extends AppCompatActivity implements InformationFragm
     TextView countryDetail, titleDetail, descriptionDetail, txtsTimes;
     ImageView iconDetail, times;
 
+    static Libraries libraryParam;
     //ImageView swipetabs;
 
     /**
@@ -54,6 +55,8 @@ public class Main2Activity extends AppCompatActivity implements InformationFragm
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+
 
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
@@ -89,22 +92,24 @@ public class Main2Activity extends AppCompatActivity implements InformationFragm
 
     private void loadContent() {
         Intent intent = getIntent();
-        Libraries getLibraries = intent.getParcelableExtra("detail");
+        libraryParam = intent.getParcelableExtra("detail");
+
+
 
         Glide.with(this)
-                .load(getLibraries.getImgDetail())
+                .load(libraryParam.getImgDetail())
                 .into(iconDetail);
 
         Glide.with(this)
-                .load(getLibraries.getTime())
+                .load(libraryParam.getTime())
                 .into(times);
 
 
-        countryDetail.setText(getLibraries.getCountry());
+        countryDetail.setText(libraryParam.getCountry());
         countryDetail.setTextColor(this.getResources().getColor(R.color.colorPrimary));
-        titleDetail.setText(getLibraries.getTitle());
-        descriptionDetail.setText(getLibraries.getMainDescription());
-        txtsTimes.setText(getLibraries.getTxttime());
+        titleDetail.setText(libraryParam.getTitle());
+        descriptionDetail.setText(libraryParam.getMainDescription());
+        txtsTimes.setText(libraryParam.getTxttime());
 
     }
 
@@ -162,8 +167,10 @@ public class Main2Activity extends AppCompatActivity implements InformationFragm
             Fragment fragment = null;
             switch (sectionNumber){
                 case 1: fragment = new InformationFragment();
+                    ((InformationFragment) fragment).elTutoId =  libraryParam.getId();
                     break;
                 case 2: fragment = new PhotosFragment();
+                    ((PhotosFragment) fragment).elTutoId =  libraryParam.getId();
                     break;
                 case 3: fragment = new MapFragment();
                     break;

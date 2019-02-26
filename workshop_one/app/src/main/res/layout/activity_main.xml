@@ -63,9 +63,12 @@
             android:layout_marginRight="4dp">
 
             <ImageView
+                android:id="@+id/mapasView"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/maps"/>
+                android:src="@drawable/maps"
+
+                />
         </LinearLayout>
 
     </android.support.v7.widget.Toolbar>

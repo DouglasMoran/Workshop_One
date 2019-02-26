@@ -48,6 +48,8 @@ public class InformationFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
+    public int elTutoId = 0;
+
     private OnFragmentInteractionListener mListener;
 
     private String jsonUrl = "https://raw.githubusercontent.com/DouglasMoran/Workshop_One/master/data_information.json";
@@ -115,11 +117,15 @@ public class InformationFragment extends Fragment {
     }
 
     private void loadFragmentInformation() {
+        //aqui vas a parametrizar
+
 
         RequestQueue resRequestQueue = Volley.newRequestQueue(getContext());
         JsonArrayRequest aarRequest = new JsonArrayRequest(jsonUrl, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray jsonArray) {
+                //Limpiar la lista
+                informationArrayList.clear();
                 if (jsonArray.length()>0){
                     for (int i = 0; i < jsonArray.length(); i++){
                         JSONObject tmp = null;
@@ -131,10 +137,12 @@ public class InformationFragment extends Fragment {
                         }
                         Gson gson = new Gson();
                         Information info = gson.fromJson(tmp.toString(),Information.class);
+                        //COmparación de id
+                        if(info.getId()==elTutoId)
                         informationArrayList.add(info);
                     }
 
-                    informationAdapter.addData(informationArrayList);
+                    //informationAdapter.addData(informationArrayList);
                 }
             }
         },
