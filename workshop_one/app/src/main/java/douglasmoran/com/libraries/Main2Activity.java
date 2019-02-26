@@ -106,7 +106,7 @@ public class Main2Activity extends AppCompatActivity implements InformationFragm
 
 
         countryDetail.setText(libraryParam.getCountry());
-        countryDetail.setTextColor(this.getResources().getColor(R.color.colorPrimary));
+        //countryDetail.setTextColor(this.getResources().getColor(R.color.colorPrimary));
         titleDetail.setText(libraryParam.getTitle());
         descriptionDetail.setText(libraryParam.getMainDescription());
         txtsTimes.setText(libraryParam.getTxttime());

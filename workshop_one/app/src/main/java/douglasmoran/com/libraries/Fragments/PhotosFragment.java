@@ -116,7 +116,7 @@ public class PhotosFragment extends Fragment{
 
         recyclerViewPhotos.setHasFixedSize(true);
 
-        recyclerViewPhotos.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerViewPhotos.setLayoutManager(new GridLayoutManager(getContext(), 2));
 
         photosArrayListBiblioteca = new ArrayList<>();
         //request = Volley.newRequestQueue(getContext());
