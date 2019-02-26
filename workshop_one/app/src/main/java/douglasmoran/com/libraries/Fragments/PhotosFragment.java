@@ -116,12 +116,12 @@ public class PhotosFragment extends Fragment{
 
         recyclerViewPhotos.setHasFixedSize(true);
 
-        recyclerViewPhotos.setLayoutManager(new GridLayoutManager(getContext(),2));
+        recyclerViewPhotos.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        photosArrayListBiblioteca = new ArrayList<Photos>();
+        photosArrayListBiblioteca = new ArrayList<>();
         //request = Volley.newRequestQueue(getContext());
 
-        loadPhotos();
+        //loadPhotos();
 
         photosAdapter = new PhotosAdapter(getActivity(),photosArrayListBiblioteca);
         recyclerViewPhotos.setAdapter(photosAdapter);
@@ -153,7 +153,7 @@ public class PhotosFragment extends Fragment{
 
                             }
 
-                            photosAdapter.addData(photosArrayListBiblioteca);
+                            //photosAdapter.addData(photosArrayListBiblioteca);
                         }
                     }
                 },

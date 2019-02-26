@@ -44,9 +44,27 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
 
         Glide.with(context)
                 .load(photo.getImg1())
-                .into(viewHolder.postal);
+                .into(viewHolder.img1);
 
+        Glide.with(context)
+                .load(photo.getImg2())
+                .into(viewHolder.img2);
 
+        Glide.with(context)
+                .load(photo.getImg3())
+                .into(viewHolder.img3);
+
+        Glide.with(context)
+                .load(photo.getImg4())
+                .into(viewHolder.img4);
+
+        Glide.with(context)
+                .load(photo.getImg5())
+                .into(viewHolder.img5);
+
+        Glide.with(context)
+                .load(photo.getImg6())
+                .into(viewHolder.img6);
 
     }
 
@@ -58,14 +76,24 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
 
 
-        CardView cardViewPostale;
-        ImageView postal;
+        CardView cardViewPostaleimg1,cardViewPostaleimg2,cardViewPostaleimg3,cardViewPostaleimg4,cardViewPostaleimg5,cardViewPostaleimg6;
+        ImageView img1,img2,img3,img4,img5,img6;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            cardViewPostale = itemView.findViewById(R.id.cardViewRecyclerPostales);
-            postal = itemView.findViewById(R.id.postales);
+            cardViewPostaleimg1 = itemView.findViewById(R.id.cardViewRecyclerPostales);
+            cardViewPostaleimg2 = itemView.findViewById(R.id.cardViewRecyclerPostalesimg2);
+            cardViewPostaleimg3 = itemView.findViewById(R.id.cardViewRecyclerPostalesimg3);
+            cardViewPostaleimg4 = itemView.findViewById(R.id.cardViewRecyclerPostalesimg4);
+            cardViewPostaleimg5 = itemView.findViewById(R.id.cardViewRecyclerPostalesimg5);
+            cardViewPostaleimg6 = itemView.findViewById(R.id.cardViewRecyclerPostalesimg6);
+            img1 = itemView.findViewById(R.id.postalesimg1);
+            img2 = itemView.findViewById(R.id.postalesimg2);
+            img3 = itemView.findViewById(R.id.postalesimg3);
+            img4 = itemView.findViewById(R.id.postalesimg4);
+            img5 = itemView.findViewById(R.id.postalesimg5);
+            img6 = itemView.findViewById(R.id.postalesimg6);
 
 
 
@@ -73,7 +101,7 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
     }
 
     public void addData(ArrayList<Photos> phots) {
-        photosArrayList.addAll(phots);
+        photosArrayList = (phots);
         notifyDataSetChanged();
     }
 }
