@@ -95,8 +95,6 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
             img5 = itemView.findViewById(R.id.postalesimg5);
             img6 = itemView.findViewById(R.id.postalesimg6);
 
-
-
         }
     }
 

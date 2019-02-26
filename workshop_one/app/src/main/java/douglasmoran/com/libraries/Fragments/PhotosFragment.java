@@ -121,7 +121,7 @@ public class PhotosFragment extends Fragment{
         photosArrayListBiblioteca = new ArrayList<>();
         //request = Volley.newRequestQueue(getContext());
 
-        //loadPhotos();
+        loadPhotos();
 
         photosAdapter = new PhotosAdapter(getActivity(),photosArrayListBiblioteca);
         recyclerViewPhotos.setAdapter(photosAdapter);
