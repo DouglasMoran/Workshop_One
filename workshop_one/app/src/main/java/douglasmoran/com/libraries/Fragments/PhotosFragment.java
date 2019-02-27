@@ -117,7 +117,7 @@ public class PhotosFragment extends Fragment{
         recyclerViewPhotos.setHasFixedSize(true);
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2);
-        recyclerViewPhotos.setLayoutManager(gridLayoutManager); // set LayoutManager to RecyclerView
+        recyclerViewPhotos.setLayoutManager(gridLayoutManager);
 
         //recyclerViewPhotos.setLayoutManager(new GridLayoutManager(getContext(), 2));
 

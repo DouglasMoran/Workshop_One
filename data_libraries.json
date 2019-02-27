@@ -8,8 +8,10 @@
         "country": "Dublín",
         "numberpic": "6 Photos",
         "title": "Trinity College",
-        "mainDescription": "Esta es sin duda una de las bibliotecas más fotografiadas del mundo y lo es por su bella estructura de planta y"
-    
+        "mainDescription": "Esta es sin duda una de las bibliotecas más fotografiadas del mundo y lo es por su bella estructura de planta y",
+        "map_lat": -8.4560181,
+        "map_long": 115.2703855
+
     },
     {   
         "id": 2,
@@ -20,8 +22,11 @@
         "country": "Copenhague",
         "numberpic": "6 Photos",
         "title": "El Diamante Negro",
-        "mainDescription": "El Diamante Negro es un impresionante edificio perteneciente a la Universidad de Copenhague, cuyos servicios"
-    
+        "mainDescription": "El Diamante Negro es un impresionante edificio perteneciente a la Universidad de Copenhague, cuyos servicios",
+        "map_lat": 51.5073,
+        "map_long": -0.1276470000000245
+        
+
     },
     {   
         "id": 3,
@@ -44,8 +49,10 @@
         "country": "Alejandría",
         "numberpic": "6 Photos",
         "title": "Nueva Alexandrina",
-        "mainDescription": "La Biblioteca Alexandrina es una importante biblioteca y centro cultural situado en Alejandría"
-    
+        "mainDescription": "La Biblioteca Alexandrina es una importante biblioteca y centro cultural situado en Alejandría",
+        "map_lat": 48.8546,
+        "map_long": 2.3477100000000064
+
     },
     {   
         "id": 5,
@@ -56,7 +63,11 @@
         "country": "New York",
         "numberpic": "6 Photos",
         "title": "Pública de Nueva York",
-        "mainDescription": "La Biblioteca Pública de Nueva York es una de las bibliotecas más importantes del mundo"
+        "mainDescription": "La Biblioteca Pública de Nueva York es una de las bibliotecas más importantes del mundo",
+        "map_lat": 40.7308619,
+        "map_long": -73.9871558
+        
+    
     },
     {   
         "id": 6,
@@ -67,8 +78,10 @@
         "country": "Berlín",
         "numberpic": "6 Photos",
         "title": "Universidad Humboldt",
-        "mainDescription": "La Universidad de Humboldt de Berlín (en alemán, Humboldt-Universität zu Berlin) es la más antigua de esta ciudad"
-    
+        "mainDescription": "La Universidad de Humboldt de Berlín (en alemán, Humboldt-Universität zu Berlin) es la más antigua de esta ciudad",
+        "map_lat": 40.7308619,
+        "map_long": -73.9871558
+
     },
     {   
         "id": 7,
@@ -79,8 +92,11 @@
         "country": "Vaticano",
         "numberpic": "6 Photos",
         "title": "Apostólica Vaticana",
-        "mainDescription": "La Biblioteca Apostólica Vaticana es la biblioteca de la Santa Sede, ubicada en Ciudad del Vaticano."
-    
+        "mainDescription": "La Biblioteca Apostólica Vaticana es la biblioteca de la Santa Sede, ubicada en Ciudad del Vaticano.",
+        "map_lat": 40.7308619,
+        "map_long": -73.9871558
+
+
     },
     {   
         "id": 8,
@@ -91,8 +107,10 @@
         "country": "Trømso",
         "numberpic": "6 Photos",
         "title": "Pública de Trømso",
-        "mainDescription": "Es singular por varias razones, aunque quizás la que más llame la atención es que se trata de la biblioteca situada"
-    
+        "mainDescription": "Es singular por varias razones, aunque quizás la que más llame la atención es que se trata de la biblioteca situada",
+        "map_lat": 40.7308619,
+        "map_long": -73.9871558
+
     },
     {   
         "id": 9,
@@ -103,8 +121,11 @@
         "country": "Lima",
         "numberpic": "6 Photos",
         "title": "Basílica de San Francisco",
-        "mainDescription": "Un amante de la historia de la iglesia se siente automáticamente transportado hasta el siglo XIV"
-    
+        "mainDescription": "Un amante de la historia de la iglesia se siente automáticamente transportado hasta el siglo XIV",
+        "map_lat": 40.7308619,
+        "map_long": -73.9871558
+
+
     },
     {   
         "id": 10,
@@ -115,7 +136,10 @@
         "country": "Praga",
         "numberpic": "6 Photos",
         "title": "Nacional de Praga",
-        "mainDescription": "El Clementinum de Praga (o Klementinum en checo) es una de las visitas imprescindibles en  la ciudad."
+        "mainDescription": "El Clementinum de Praga (o Klementinum en checo) es una de las visitas imprescindibles en  la ciudad.",
+        "map_lat": 40.7308619,
+        "map_long": -73.9871558
+    
     }
     
 ]
