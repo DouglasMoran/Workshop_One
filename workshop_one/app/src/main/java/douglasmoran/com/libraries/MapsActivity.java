@@ -2,6 +2,7 @@ package douglasmoran.com.libraries;
 
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -46,14 +47,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         //recuperar coordenadas
-        Libraries librariesCoordinates = getIntent().getParcelableExtra("coordinates");
+        Libraries librariesCoordinates = getIntent().getParcelableExtra("detail");
+
+        Toast.makeText(this, String.valueOf(librariesCoordinates.getMap_lat()), Toast.LENGTH_SHORT).show();
 
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(librariesCoordinates.getMap_lat(), librariesCoordinates.getMap_long());
         mMap.addMarker(new MarkerOptions().position(sydney).title(librariesCoordinates.getCountry()));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,15));
 
+        /*LatLng parkMoran = new LatLng(13.831011,-89.272049);
+        centralPark = googleMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.parking)).position(parkMoran).title("Parque Morán"));
 
+        LatLng tomaCancha = new LatLng(13.847482 ,-89.292378);
+        toma = googleMap.addMarker(new MarkerOptions().icon(BitmapDescriptorFactory.fromResource(R.drawable.aquapark)).position(tomaCancha).title("Cancha de la Toma"));
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(parkMoran,20));*/
 
 
     }

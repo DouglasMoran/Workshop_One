@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 import douglasmoran.com.libraries.Main2Activity;
+import douglasmoran.com.libraries.MapsActivity;
 import douglasmoran.com.libraries.Models.Libraries;
 import douglasmoran.com.libraries.R;
 

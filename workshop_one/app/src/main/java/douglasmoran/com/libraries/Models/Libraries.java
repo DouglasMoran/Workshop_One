@@ -6,42 +6,29 @@ import android.os.Parcelable;
 public class Libraries implements Parcelable {
 
     private int id;
+    private String time;
+    private String txttime;
     private String imgItem;
     private String imgDetail;
     private String country;
     private String numberpic;
     private String title;
     private String mainDescription;
-
-    private String time;
-    private String txttime;
-
     private float map_lat;
     private float map_long;
 
-
-    protected Libraries(Parcel in){
-
+    protected Libraries(Parcel in) {
         id = in.readInt();
+        time = in.readString();
+        txttime = in.readString();
         imgItem = in.readString();
         imgDetail = in.readString();
         country = in.readString();
         numberpic = in.readString();
         title = in.readString();
         mainDescription = in.readString();
-
-        time = in.readString();
-        txttime = in.readString();
-
         map_lat = in.readFloat();
-        map_long = in.readLong();
-
-    }
-
-
-    @Override
-    public int describeContents() {
-        return 0;
+        map_long = in.readFloat();
     }
 
     public static final Creator<Libraries> CREATOR = new Creator<Libraries>() {
@@ -56,13 +43,28 @@ public class Libraries implements Parcelable {
         }
     };
 
-
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getTxttime() {
+        return txttime;
+    }
+
+    public void setTxttime(String txttime) {
+        this.txttime = txttime;
     }
 
     public String getImgItem() {
@@ -109,14 +111,6 @@ public class Libraries implements Parcelable {
         return mainDescription;
     }
 
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
-
     public void setMainDescription(String mainDescription) {
         this.mainDescription = mainDescription;
     }
@@ -137,42 +131,23 @@ public class Libraries implements Parcelable {
         this.map_long = map_long;
     }
 
-    public String getTxttime() {
-        return txttime;
-    }
-
-    public void setTxttime(String txttime) {
-        this.txttime = txttime;
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
     @Override
-    public void writeToParcel(Parcel desc, int flags) {
-
-        desc.writeInt(id);
-        desc.writeString(imgItem);
-        desc.writeString(imgDetail);
-        desc.writeString(country);
-        desc.writeString(numberpic);
-        desc.writeString(title);
-        desc.writeString(mainDescription);
-
-        desc.writeString(time);
-        desc.writeString(txttime);
-
-        desc.writeFloat(map_lat);
-        desc.writeFloat(map_long);
-
-
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeInt(id);
+        parcel.writeString(time);
+        parcel.writeString(txttime);
+        parcel.writeString(imgItem);
+        parcel.writeString(imgDetail);
+        parcel.writeString(country);
+        parcel.writeString(numberpic);
+        parcel.writeString(title);
+        parcel.writeString(mainDescription);
+        parcel.writeFloat(map_lat);
+        parcel.writeFloat(map_long);
     }
-
-    public Libraries(int id, String imgItem, String imgDetail, String country, String numberpic, String title, String mainDescription) {
-        this.id = id;
-        this.imgItem = imgItem;
-        this.imgDetail = imgDetail;
-        this.country = country;
-        this.numberpic = numberpic;
-        this.title = title;
-        this.mainDescription = mainDescription;
-    }
-
 }
