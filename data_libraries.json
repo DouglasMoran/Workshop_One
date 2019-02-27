@@ -141,6 +141,20 @@
         "map_lat": 50.087465,
         "map_long": 14.421254
     
+    },
+    {   
+        "id": 11,
+        "txttime": "28°F",
+        "time": "https://image.flaticon.com/icons/png/512/56/56141.png",
+        "imgItem": "https://douglasflores9817.000webhostapp.com/img/university_256.png",
+        "imgDetail": "https://douglasflores9817.000webhostapp.com/img/university_256.png",
+        "country": "UDB",
+        "numberpic": "4 Photos",
+        "title": "Rafael Meza Ayua",
+        "mainDescription": "La Universidad Don Bosco es una universidad salesiana de El Salvador localizada en el municipio de Soyapango",
+        "map_lat": 13.71628,
+        "map_long": -89.151548
+    
     }
     
 ]
