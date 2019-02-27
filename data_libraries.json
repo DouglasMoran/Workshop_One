@@ -8,10 +8,15 @@
         "country": "Dublín",
         "numberpic": "6 Photos",
         "title": "Trinity College",
+<<<<<<< HEAD
         "mainDescription": "Esta es sin duda una de las bibliotecas más fotografiadas del mundo y lo es por su bella estructura de planta y",
         "map_lat": -8.4560181,
         "map_long": 115.2703855
 
+=======
+        "mainDescription": "Esta es sin duda una de las bibliotecas más fotografiadas del mundo y lo es por su bella estructura de planta y"
+        
+>>>>>>> d37a33dc8763247e670de96ee3f281ad0c66736d
     },
     {   
         "id": 2,

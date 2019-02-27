@@ -10,6 +10,8 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import douglasmoran.com.libraries.Models.Libraries;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
@@ -22,6 +24,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
 
 
 
@@ -42,13 +45,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        //recuperar coordenadas
+        Libraries librariesCoordinates = getIntent().getParcelableExtra("coordinates");
+
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        LatLng sydney = new LatLng(librariesCoordinates.getMap_lat(), librariesCoordinates.getMap_long());
+        mMap.addMarker(new MarkerOptions().position(sydney).title(librariesCoordinates.getCountry()));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
 
-        
+
 
     }
 }

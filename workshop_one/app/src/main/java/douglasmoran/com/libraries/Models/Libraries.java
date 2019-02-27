@@ -16,6 +16,9 @@ public class Libraries implements Parcelable {
     private String time;
     private String txttime;
 
+    private float map_lat;
+    private float map_long;
+
 
     protected Libraries(Parcel in){
 
@@ -29,6 +32,9 @@ public class Libraries implements Parcelable {
 
         time = in.readString();
         txttime = in.readString();
+
+        map_lat = in.readFloat();
+        map_long = in.readLong();
 
     }
 
@@ -115,6 +121,22 @@ public class Libraries implements Parcelable {
         this.mainDescription = mainDescription;
     }
 
+    public float getMap_lat() {
+        return map_lat;
+    }
+
+    public void setMap_lat(float map_lat) {
+        this.map_lat = map_lat;
+    }
+
+    public float getMap_long() {
+        return map_long;
+    }
+
+    public void setMap_long(float map_long) {
+        this.map_long = map_long;
+    }
+
     public String getTxttime() {
         return txttime;
     }
@@ -136,6 +158,10 @@ public class Libraries implements Parcelable {
 
         desc.writeString(time);
         desc.writeString(txttime);
+
+        desc.writeFloat(map_lat);
+        desc.writeFloat(map_long);
+
 
     }
 

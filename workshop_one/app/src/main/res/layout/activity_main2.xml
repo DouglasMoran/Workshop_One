@@ -51,9 +51,10 @@
             android:layout_marginRight="4dp">
 
             <ImageView
+                android:id="@+id/mapButton"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/user"/>
+                android:src="@drawable/maps"/>
 
         </LinearLayout>
 

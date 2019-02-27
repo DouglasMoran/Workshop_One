@@ -94,6 +94,17 @@ public class Main2Activity extends AppCompatActivity implements InformationFragm
         Intent intent = getIntent();
         libraryParam = intent.getParcelableExtra("detail");
 
+        ImageView mapButton = findViewById(R.id.mapButton);
+        mapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentMaps = new Intent(Main2Activity.this, MapsActivity.class);
+                intentMaps.putExtra("coordinates", libraryParam);
+                startActivity(intentMaps);
+
+            }
+        });
+
 
 
         Glide.with(this)
