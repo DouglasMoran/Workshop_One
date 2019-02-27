@@ -22,8 +22,8 @@
         "numberpic": "6 Photos",
         "title": "El Diamante Negro",
         "mainDescription": "El Diamante Negro es un impresionante edificio perteneciente a la Universidad de Copenhague, cuyos servicios",
-        "map_lat": 51.5073,
-        "map_long": -0.1276470000000245
+        "map_lat": 55.686724,
+        "map_long": 12.570072
         
 
     },
@@ -37,8 +37,8 @@
         "numberpic": "6 Photos",
         "title": "Pública de Estocolmo",
         "mainDescription": "La Biblioteca Pública de Estocolmo es un edificio cilíndrico situado en Estocolmo, Suecia, diseñado por el",
-         "map_lat": 48.8546,
-        "map_long": 2.3477100000000064
+        "map_lat": 59.325117,
+        "map_long": 18.071094
     
     },
     {   
@@ -51,8 +51,8 @@
         "numberpic": "6 Photos",
         "title": "Nueva Alexandrina",
         "mainDescription": "La Biblioteca Alexandrina es una importante biblioteca y centro cultural situado en Alejandría",
-        "map_lat": 48.8546,
-        "map_long": 2.3477100000000064
+        "map_lat": 31.199004,
+        "map_long": 29.894378
 
     },
     {   
@@ -65,8 +65,8 @@
         "numberpic": "6 Photos",
         "title": "Pública de Nueva York",
         "mainDescription": "La Biblioteca Pública de Nueva York es una de las bibliotecas más importantes del mundo",
-        "map_lat": 40.7308619,
-        "map_long": -73.9871558
+        "map_lat": 43.00035,
+        "map_long": -75.4999
         
     
     },
@@ -80,8 +80,8 @@
         "numberpic": "6 Photos",
         "title": "Universidad Humboldt",
         "mainDescription": "La Universidad de Humboldt de Berlín (en alemán, Humboldt-Universität zu Berlin) es la más antigua de esta ciudad",
-        "map_lat": 40.7308619,
-        "map_long": -73.9871558
+        "map_lat": 52.517037,
+        "map_long": 13.38886
 
     },
     {   
@@ -94,8 +94,8 @@
         "numberpic": "6 Photos",
         "title": "Apostólica Vaticana",
         "mainDescription": "La Biblioteca Apostólica Vaticana es la biblioteca de la Santa Sede, ubicada en Ciudad del Vaticano.",
-        "map_lat": 40.7308619,
-        "map_long": -73.9871558
+        "map_lat": 41.903491,
+        "map_long": 12.452835
 
 
     },
@@ -109,8 +109,8 @@
         "numberpic": "6 Photos",
         "title": "Pública de Trømso",
         "mainDescription": "Es singular por varias razones, aunque quizás la que más llame la atención es que se trata de la biblioteca situada",
-        "map_lat": 40.7308619,
-        "map_long": -73.9871558
+        "map_lat": 69.6489,
+        "map_long": 18.95508
 
     },
     {   
@@ -123,8 +123,8 @@
         "numberpic": "6 Photos",
         "title": "Basílica de San Francisco",
         "mainDescription": "Un amante de la historia de la iglesia se siente automáticamente transportado hasta el siglo XIV",
-        "map_lat": 40.7308619,
-        "map_long": -73.9871558
+        "map_lat": -12.05,
+        "map_long":  -76.75
 
 
     },
@@ -138,8 +138,8 @@
         "numberpic": "6 Photos",
         "title": "Nacional de Praga",
         "mainDescription": "El Clementinum de Praga (o Klementinum en checo) es una de las visitas imprescindibles en  la ciudad.",
-        "map_lat": 40.7308619,
-        "map_long": -73.9871558
+        "map_lat": 50.087465,
+        "map_long": 14.421254
     
     }
     
