@@ -110,13 +110,16 @@ public class PhotosFragment extends Fragment{
 
         View view = inflater.inflate(R.layout.fragment_photos, container, false);
 
-        photosArrayListBiblioteca = new ArrayList<>();
+        //photosArrayListBiblioteca = new ArrayList<>();
 
         recyclerViewPhotos = view.findViewById(R.id.recyclerFragmentPhotos);
 
         recyclerViewPhotos.setHasFixedSize(true);
 
-        recyclerViewPhotos.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2);
+        recyclerViewPhotos.setLayoutManager(gridLayoutManager); // set LayoutManager to RecyclerView
+
+        //recyclerViewPhotos.setLayoutManager(new GridLayoutManager(getContext(), 2));
 
         photosArrayListBiblioteca = new ArrayList<>();
         //request = Volley.newRequestQueue(getContext());
