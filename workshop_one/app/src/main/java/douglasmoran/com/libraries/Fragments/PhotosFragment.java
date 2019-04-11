@@ -4,8 +4,10 @@ package douglasmoran.com.libraries.Fragments;
 import android.content.Context;
 
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -53,9 +55,12 @@ public class PhotosFragment extends Fragment{
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private SwipeRefreshLayout refreshLayout;
 
     public int elTutoId = 0;
 
@@ -96,12 +101,39 @@ public class PhotosFragment extends Fragment{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
         loadPhotos();
     }
+
+    private void cargarDatos() {
+        new Swipefresh().execute();
+    }
+
+    private class Swipefresh extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+
+            refreshLayout.setRefreshing(false);
+        }
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -112,19 +144,35 @@ public class PhotosFragment extends Fragment{
 
         //photosArrayListBiblioteca = new ArrayList<>();
 
+        refreshLayout = view.findViewById(R.id.swipeRefreshfragmentphotos);
+        refreshLayout.setColorSchemeResources(R.color.colorPrimary);
+        refreshLayout.setProgressBackgroundColorSchemeResource(R.color.colorAccent);
+
         recyclerViewPhotos = view.findViewById(R.id.recyclerFragmentPhotos);
 
         recyclerViewPhotos.setHasFixedSize(true);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2);
-        recyclerViewPhotos.setLayoutManager(gridLayoutManager);
+        //GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(),2);
+        //recyclerViewPhotos.setLayoutManager(gridLayoutManager);
 
-        //recyclerViewPhotos.setLayoutManager(new GridLayoutManager(getContext(), 2));
+        recyclerViewPhotos.setLayoutManager(new LinearLayoutManager(getContext()));
 
         photosArrayListBiblioteca = new ArrayList<>();
         //request = Volley.newRequestQueue(getContext());
 
-        loadPhotos();
+
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                // Esto se ejecuta cada vez que se realiza el gesto
+                photosArrayListBiblioteca.clear();
+                loadPhotos();
+                cargarDatos();
+            }
+        });
+
+
+        //loadPhotos();
 
         photosAdapter = new PhotosAdapter(getActivity(),photosArrayListBiblioteca);
         recyclerViewPhotos.setAdapter(photosAdapter);
@@ -136,30 +184,30 @@ public class PhotosFragment extends Fragment{
     private void loadPhotos() {
         RequestQueue resRequestQueue = Volley.newRequestQueue(getContext());
         JsonArrayRequest aarRequest = new JsonArrayRequest(jsonUrl, new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray jsonArray) {
-                        //Limpiar la lista
-                        photosArrayListBiblioteca.clear();
-                        if (jsonArray.length()>0){
-                            for (int i = 0; i < jsonArray.length(); i++){
-                                JSONObject tmp = null;
-                                try {
-                                    tmp = jsonArray.getJSONObject(i);
-                                    photosAdapter.notifyDataSetChanged();
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-                                }
-                                Gson gson = new Gson();
-                                Photos pic = gson.fromJson(tmp.toString(),Photos.class);
-                                if(pic.getId()==elTutoId)
-                                    photosArrayListBiblioteca.add(pic);
-
-                            }
-
-                            //photosAdapter.addData(photosArrayListBiblioteca);
+            @Override
+            public void onResponse(JSONArray jsonArray) {
+                //Limpiar la lista
+                photosArrayListBiblioteca.clear();
+                if (jsonArray.length()>0){
+                    for (int i = 0; i < jsonArray.length(); i++){
+                        JSONObject tmp = null;
+                        try {
+                            tmp = jsonArray.getJSONObject(i);
+                            photosAdapter.notifyDataSetChanged();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
                         }
+                        Gson gson = new Gson();
+                        Photos pic = gson.fromJson(tmp.toString(),Photos.class);
+                        if(pic.getId()==elTutoId)
+                            photosArrayListBiblioteca.add(pic);
+
                     }
-                },
+
+                    //photosAdapter.addData(photosArrayListBiblioteca);
+                }
+            }
+        },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {

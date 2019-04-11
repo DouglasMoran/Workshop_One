@@ -1,6 +1,8 @@
 package douglasmoran.com.libraries;
 
 import android.content.Intent;
+import android.os.AsyncTask;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity{
     private ArrayList<Libraries> librariesArrayList = new ArrayList<>();
     //ImageView imageMapsView;
 
+    private SwipeRefreshLayout refreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,8 +43,48 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
 
         loadContent();
+        refreshLayout = findViewById(R.id.swipeRefresh);
+
+        refreshLayout.setColorSchemeResources(R.color.colorPrimary);
+        refreshLayout.setProgressBackgroundColorSchemeResource(R.color.colorAccent);
+
+        // Iniciar la tarea asíncrona al revelar el indicador
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                // Esto se ejecuta cada vez que se realiza el gesto
+                librariesArrayList.clear();
+                loadContent();
+                cargarDatos();
+            }
+        });
 
     }
+
+    private void cargarDatos() {
+        new Swipefresh().execute();
+    }
+
+    private class Swipefresh extends AsyncTask<Void, Void, Void> {
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+
+            refreshLayout.setRefreshing(false);
+        }
+    }
+
 
     private void loadContent() {
         RequestQueue resRequestQueue = Volley.newRequestQueue(this);

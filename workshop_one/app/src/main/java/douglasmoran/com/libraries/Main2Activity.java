@@ -31,7 +31,7 @@ public class Main2Activity extends AppCompatActivity implements InformationFragm
 
     CardView cardViewDetail;
     TextView countryDetail, titleDetail, descriptionDetail, txtsTimes;
-    ImageView iconDetail, times;
+    ImageView iconDetail, times, backBtn;
 
     static Libraries libraryParam;
     //ImageView swipetabs;
@@ -68,7 +68,7 @@ public class Main2Activity extends AppCompatActivity implements InformationFragm
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));
@@ -93,6 +93,17 @@ public class Main2Activity extends AppCompatActivity implements InformationFragm
     private void loadContent() {
         Intent intent = getIntent();
         libraryParam = intent.getParcelableExtra("detail");
+
+
+        backBtn = findViewById(R.id.backButtom);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
+
+
 
         //para mapas
         ImageView mapButton = findViewById(R.id.mapButton);
@@ -184,8 +195,8 @@ public class Main2Activity extends AppCompatActivity implements InformationFragm
                 case 2: fragment = new PhotosFragment();
                     ((PhotosFragment) fragment).elTutoId =  libraryParam.getId();
                     break;
-                case 3: fragment = new MapFragment();
-                    break;
+                /*case 3: fragment = new MapFragment();
+                    break;*/
             }
             return fragment;
         }
@@ -223,7 +234,8 @@ public class Main2Activity extends AppCompatActivity implements InformationFragm
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            //quiete un viewpage ahora solo retorna 2 antes 3
+            return 2;
         }
     }
 }

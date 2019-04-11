@@ -1,6 +1,7 @@
 package douglasmoran.com.libraries.Adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -64,6 +65,8 @@ public class InformationAdapter extends RecyclerView.Adapter<InformationAdapter.
             super(itemView);
 
             cardViewInformation = itemView.findViewById(R.id.cardViewInfo);
+            cardViewInformation.setCardBackgroundColor(Color.WHITE);
+
             textoHistory = itemView.findViewById(R.id.txtHistoryInfo);
             historiDescInfo = itemView.findViewById(R.id.historyDescriptionInfo);
             constInfo = itemView.findViewById(R.id.constructionInfo);

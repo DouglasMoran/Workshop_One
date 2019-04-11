@@ -2,6 +2,7 @@ package douglasmoran.com.libraries.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -51,7 +52,6 @@ public class LibrariesAdapter extends RecyclerView.Adapter<LibrariesAdapter.View
                 .load(libraries1.getImgItem())
                 .into(viewHolder.iconItem);
 
-
         viewHolder.cardViewItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,6 +81,8 @@ public class LibrariesAdapter extends RecyclerView.Adapter<LibrariesAdapter.View
 
             //relativeLayoutItem = itemView.findViewById(R.id.relativeItems);
             cardViewItem = itemView.findViewById(R.id.cardViewItems);
+            cardViewItem.setCardBackgroundColor(Color.WHITE);
+
             iconItem = itemView.findViewById(R.id.iconItems);
             countryItem = itemView.findViewById(R.id.countryItems);
             numberpicItem = itemView.findViewById(R.id.numberpicItems);

@@ -23,7 +23,6 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
     ArrayList<Photos> photosArrayList;
 
 
-
     public PhotosAdapter(Context context, ArrayList<Photos> photosArrayList) {
         this.context = context;
         this.photosArrayList = photosArrayList;
@@ -58,7 +57,7 @@ public class PhotosAdapter extends RecyclerView.Adapter<PhotosAdapter.ViewHolder
                 .load(photo.getImg4())
                 .into(viewHolder.img4);
 
-       Glide.with(context)
+        Glide.with(context)
                 .load(photo.getImg5())
                 .into(viewHolder.img5);
 

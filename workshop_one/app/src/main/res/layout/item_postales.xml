@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
     android:layout_marginTop="16dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
     android:layout_marginBottom="16dp"
     >
 
     <android.support.v7.widget.CardView
-        android:layout_width="130dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        app:cardBackgroundColor="#F7F2F2"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="16dp"
+        app:cardBackgroundColor="#FCFFFF"
         android:id="@+id/cardViewRecyclerPostales"
+        app:cardCornerRadius="7dp"
         >
 
         <ImageView
@@ -31,32 +30,32 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:layout_width="130dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginLeft="20dp"
-        app:cardBackgroundColor="#F7F2F2"
         android:id="@+id/cardViewRecyclerPostalesimg2"
-        >
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="right"
+        app:cardBackgroundColor="#FCFFFF"
+        app:cardCornerRadius="7dp">
 
         <ImageView
             android:id="@+id/postalesimg2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@color/colorPrimary"
             android:scaleType="centerCrop"
-            />
+            android:src="@color/colorPrimary" />
 
     </android.support.v7.widget.CardView>
 
 
     <android.support.v7.widget.CardView
-        android:layout_width="130dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="290dp"
-        android:layout_marginLeft="20dp"
-        app:cardBackgroundColor="#F7F2F2"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="152dp"
+        app:cardBackgroundColor="#F7F8FA"
         android:id="@+id/cardViewRecyclerPostalesimg3"
+        app:cardCornerRadius="7dp"
         >
 
         <ImageView
@@ -71,12 +70,14 @@
 
 
     <android.support.v7.widget.CardView
-        android:layout_width="130dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="430dp"
-        android:layout_marginLeft="20dp"
-        app:cardBackgroundColor="#F7F2F2"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="right"
+        app:cardBackgroundColor="#F7F8FA"
         android:id="@+id/cardViewRecyclerPostalesimg4"
+        app:cardCornerRadius="7dp"
         >
 
         <ImageView
@@ -91,12 +92,13 @@
 
 
     <android.support.v7.widget.CardView
-        android:layout_width="130dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="570dp"
-        android:layout_marginLeft="20dp"
-        app:cardBackgroundColor="#F7F2F2"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="308dp"
+        android:layout_marginLeft="16dp"
+        app:cardBackgroundColor="#F7F8FA"
         android:id="@+id/cardViewRecyclerPostalesimg5"
+        app:cardCornerRadius="7dp"
         >
 
         <ImageView
@@ -111,12 +113,14 @@
 
 
     <android.support.v7.widget.CardView
-        android:layout_width="130dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="710dp"
-        android:layout_marginLeft="20dp"
-        app:cardBackgroundColor="#F7F2F2"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="308dp"
+        android:layout_gravity="right"
+        android:layout_marginRight="16dp"
+        app:cardBackgroundColor="#F7F8FA"
         android:id="@+id/cardViewRecyclerPostalesimg6"
+        app:cardCornerRadius="7dp"
         >
 
         <ImageView
@@ -129,4 +133,4 @@
 
     </android.support.v7.widget.CardView>
 
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

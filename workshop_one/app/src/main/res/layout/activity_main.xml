@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,7 +15,7 @@
         android:background="#79FCFFFF"
         >
 
-        <LinearLayout
+       <!-- <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="16dp"
@@ -24,9 +25,9 @@
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src=""/>
+                android:src="@drawable/user"/>
 
-        </LinearLayout>
+        </LinearLayout>-->
 
 
         <TextView
@@ -40,7 +41,8 @@
 
             />
 
-        <LinearLayout
+
+       <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="15dp"
@@ -48,30 +50,22 @@
             android:layout_marginRight="4dp">
 
             <ImageView
+                android:id="@+id/notification_view"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src=""/>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="15dp"
-            android:layout_gravity="right"
-            android:layout_marginRight="4dp">
-
-            <ImageView
-                android:id="@+id/mapasView"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src=""
+                android:src="@drawable/ic_notifications"
 
                 />
         </LinearLayout>
 
     </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        >
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerViewItem"
@@ -80,5 +74,7 @@
         android:scrollbars="vertical"
         android:layout_marginTop="70dp"
         />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

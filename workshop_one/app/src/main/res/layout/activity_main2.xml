@@ -25,9 +25,11 @@
             android:paddingTop="16dp">
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/back"/>
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back"
+                android:id="@+id/backButtom"
+                />
 
         </LinearLayout>
 
@@ -52,8 +54,8 @@
 
             <ImageView
                 android:id="@+id/mapButton"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:src="@drawable/maps"/>
 
         </LinearLayout>
@@ -65,10 +67,11 @@
         android:id="@+id/cardViewDetails"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        app:cardBackgroundColor="#F7F2F2"
+        app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="7dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         >
 
         <ImageView
@@ -113,7 +116,7 @@
         <LinearLayout
             android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="95dp"
+            android:layout_marginTop="100dp"
             android:orientation="vertical"
             android:layout_gravity="left"
             >
@@ -193,11 +196,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/tab_text_2" />
 
-            <android.support.design.widget.TabItem
+           <!-- <android.support.design.widget.TabItem
                 android:id="@+id/tabItem3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tab_text_3" />
+                android:text="@string/tab_text_3" />-->
 
         </android.support.design.widget.TabLayout>
 

@@ -2,11 +2,13 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardViewItems"
-    android:layout_width="130dp"
+    android:layout_width="150dp"
     android:layout_height="175dp"
     app:cardBackgroundColor="#F7F2F2"
     app:cardCornerRadius="7dp"
-    android:layout_margin="15dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginLeft="28dp"
+    android:layout_marginBottom="16dp"
     >
 
     <LinearLayout
@@ -28,13 +30,10 @@
 
     </LinearLayout>
 
-
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="105dp"
+                android:layout_marginTop="110dp"
                 android:orientation="vertical"
                 >
 
@@ -45,7 +44,6 @@
                     android:text="New York"
                     android:padding="5dp"
                     android:gravity="center_horizontal"
-                    android:textColor="#8E24AA"
                     />
 
             </LinearLayout>
@@ -54,7 +52,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="125dp"
+                android:layout_marginTop="130dp"
                 android:orientation="vertical"
                 >
 

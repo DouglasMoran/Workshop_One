@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "462200642838",
+    "firebase_url": "https://notificationlibraries.firebaseio.com",
+    "project_id": "notificationlibraries",
+    "storage_bucket": "notificationlibraries.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462200642838:android:a9adf29236f837b9",
+        "android_client_info": {
+          "package_name": "douglasmoran.com.libraries"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462200642838-lidal7rvo3big74fkslr5s9b7ape3md4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "douglasmoran.com.libraries",
+            "certificate_hash": "6657db5b3f7b9a47df5292aa38b391f858a2fae3"
+          }
+        },
+        {
+          "client_id": "462200642838-s3va95pknmean8l20k2nukg6qd4mf5kr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGZOXEknk1cDSvMG0QzF5Fjr0yeAPUGTk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462200642838-s3va95pknmean8l20k2nukg6qd4mf5kr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
