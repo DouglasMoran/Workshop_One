@@ -105,6 +105,16 @@
         "curiosity": "Es el mayor complejo arquitectónico de la ciudad, superado solo por el Castillo de Praga",
         "desingBy": "Arquitectos  Roman Brychta, Petr Lešek, Adam Halíř, Ondřej Hofmeister",
         "address": "Mariánské náměstí 5, 110 00, Praga."
+    },
+    {   
+        "id": 11,
+        "txtHistory": "HISTORY",
+        "history": "Fue fundada el 8 de marzo de 1984 por el Acuerdo No. 677 del Ministerio de Educación de El Salvador, aunque sus actividades académicas dieron inicio hasta el 14 de enero de 1986. La Universidad Don Bosco constituye una de las instituciones de estudios superiores más prestigiosas de El Salvador, sobre todo en el área técnica y tecnológica",
+        "construction": "8 de marzo de 1984",
+        "jewel": "El Proyecto de Integración Lineal de Educación Técnica (PILET)",
+        "curiosity": "Única en el país en carreras de ingenierías Biomédica, en Aeronáutica y Mecatrónica",
+        "desingBy": "Salesianos de Don Bosco",
+        "address": "Avenida Albert Einstein 233, Antiguo Cuscatlán"
     }
     
 ]
