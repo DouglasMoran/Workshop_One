@@ -1,0 +1,42 @@
+[  
+    {  
+       "product_id":"29",
+       "0":"29",
+       "name_product":"HTC 2018",
+       "1":"HTC 2018",
+       "category_id":"2",
+       "2":"2",
+       "name_category":"Tablets",
+       "3":"Tablets"
+    },
+    {  
+       "product_id":"28",
+       "0":"28",
+       "name_product":"Huawei P30 Pro",
+       "1":"Huawei P30 Pro",
+       "category_id":"1",
+       "2":"1",
+       "name_category":"Smartphones-Mobiles",
+       "3":"Smartphones-Mobiles"
+    },
+    {  
+       "product_id":"27",
+       "0":"27",
+       "name_product":"Pixel 3",
+       "1":"Pixel 3",
+       "category_id":"1",
+       "2":"1",
+       "name_category":"Smartphones-Mobiles",
+       "3":"Smartphones-Mobiles"
+    },
+    {  
+       "product_id":"31",
+       "0":"31",
+       "name_product":"x",
+       "1":"x",
+       "category_id":"1",
+       "2":"1",
+       "name_category":"Smartphones-Mobiles",
+       "3":"Smartphones-Mobiles"
+    }
+ ]
